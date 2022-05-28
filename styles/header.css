@@ -1,0 +1,14 @@
+header {
+  position: fixed;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.616);
+  z-index: 9999;
+  padding: 1em;
+}
+
+header img {
+  width: 25vw;
+  display: block;
+  margin: auto;
+}
+/*# sourceMappingURL=header.css.map */

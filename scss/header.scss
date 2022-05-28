@@ -1,0 +1,16 @@
+@import './variables';
+
+header{
+    position: fixed;
+    width:100vw;
+    background-color:$hd-color;
+    z-index: 9999;
+    padding:1em;
+    img{
+        width:25vw;
+        display:block;
+        margin:auto;
+    }
+}
+
+

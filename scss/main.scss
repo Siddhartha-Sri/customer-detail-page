@@ -1,0 +1,89 @@
+@import './variables';
+body{
+    background-image:$body-gradient;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height:100%;
+    overflow-x: hidden;
+}
+main{
+    
+   padding-top:17%;
+   @media screen and (min-width:640px){
+      padding-top:10%;
+   }
+   .user-div-container{
+        @media screen and (min-width:640px){
+            display:flex;
+            flex-wrap:wrap;
+        }
+        perspective: 1000px;
+        .user-div{
+            border:2px solid black;
+            padding:1em;
+            margin:1em auto;
+            background-color: rgb(253, 253, 253);
+            transition: transform 0.5s ease-in-out;
+            width:90%;
+            @media screen and (min-width:640px){
+                width:48%;
+            }
+            @media screen and (min-width:1024px){
+                width:30%;
+            }
+            h2{
+                text-align: center;
+                width:100%;
+                color:$second-heading-color;
+            }
+            h3{
+                color:$second-heading-color;
+                padding:0.2em 0;
+            }
+            img{
+                width:50%;
+                display: block;
+                margin:1em auto;
+            }
+            ul{
+                padding-top:1em;
+                li{
+                    line-height:2em;
+                }
+            }
+            button{
+                padding:0.7em 1em;
+                background-color: $second-heading-color;
+                border-radius:0.5em;
+                display: block;
+                margin:1em auto 0.1em;
+                color:#fff;
+                &:hover,&:focus{
+                    
+                box-shadow: 1px 4px 3px 2px rgb(219, 218, 218);
+                }
+            }
+            .back-view{
+                position: absolute;
+                display: none;
+                transform: rotateY(180deg); 
+            }
+            &.is-flipped{
+                box-shadow: 0px 4px 11px rgb(150, 149, 149);
+                transform: rotateY(180deg);
+            }
+            &:focus{ 
+                box-shadow: 1px 4px 11px 10px rgb(150, 149, 149);
+            }
+            @media screen and (min-width:640px){ 
+                &:last-child{
+                    margin-left: 1.2em;
+                }
+            }
+        }
+    }
+}
+.wrapper{
+    width:80%;
+    margin:auto;
+}
